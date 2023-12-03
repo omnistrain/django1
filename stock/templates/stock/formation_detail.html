@@ -1,0 +1,24 @@
+{%extends 'stock/base.html'%}
+
+{%block content%}
+      <h2>{{formation.name}}</h2>
+
+      <ul>
+        <li>Groupe : {{formation.groupe}}</li>
+        <li>Formateur : {{formation.formateur}}</li>
+        
+        {%if formation.page %}
+        <li> <a href="{{formation.page}}">{{formation.page}}</a></li>
+        {%endif%}
+    </ul>
+
+      <fieldset>
+        <legend>Descritpion</legend>
+        <p>
+            {{formation.descritpion}}
+        </p>
+
+    
+    </fieldset>
+    <a href="{% url 'formation-list' %}">Retour à la liste de formations</a>
+{%endblock%} 

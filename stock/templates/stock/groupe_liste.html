@@ -1,0 +1,17 @@
+{%extends 'stock/base.html'%}
+
+{%block content%}
+        <h2>Les groupes de stocks : </h2>
+        <ul>
+            {%for groupe in groupes %}
+                <li> <a href="{% url 'groupe-detail' groupe.id %}">{{groupe.name}}</a> - <a href="{% url 'groupe-update' groupe.id %}">[modifier]</a> - <a href="{% url 'groupe-delete' groupe.id %}">[supprimer]</a></li>
+            {%endfor%}
+        </ul>
+
+
+        <div>
+            <a href="{% url 'groupe-add' %}">Créer un nouveau groupe</a>
+            
+
+        </div>
+{%endblock%}

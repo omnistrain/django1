@@ -1,0 +1,15 @@
+{%extends 'stock/base.html'%}
+
+{%block content%}
+        <h2>Les formations de stocks : </h2>
+        <ul>
+            {%for formation in formations %}
+                <li> <a href="{% url 'formation-detail' formation.id %}">{{formation.name}}</a></li>
+            {%endfor%}
+        </ul>
+
+        <div>
+            <a href="{% url 'formation-add' %}">Créer une nouvelle formation</a>
+
+        </div>
+{%endblock%}

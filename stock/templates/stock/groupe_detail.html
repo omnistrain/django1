@@ -1,0 +1,25 @@
+{%extends 'stock/base.html'%}
+
+{%block content%}
+      <h2>{{groupe.name}}</h2>
+
+      <ul>
+        <li>Groupe active : {{groupe.active|yesno}}</li>
+        <li>Catégorie : {{groupe.get_category_display}}</li>
+        <li>Année de création : {{groupe.creation}}</li>
+        
+        {%if groupe.page %}
+        <li> <a href="{{groupe.page}}">{{groupe.page}}</a></li>
+        {%endif%}
+    </ul>
+
+      <fieldset>
+        <legend>Descritpion</legend>
+        <p>
+            {{groupe.description}}
+        </p>
+
+    
+    </fieldset>
+    <a href="{% url 'groupe-list' %}">Retour à la liste de groupe</a>
+{%endblock%} 

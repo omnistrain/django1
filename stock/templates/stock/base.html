@@ -1,0 +1,21 @@
+{% load static%}
+
+<html>
+    <head>
+        <title>Stock</title>
+        <link rel="stylesheet" href="{% static 'stock/style.css' %}" />
+    </head>
+    <body>
+
+        <header>
+            <h1>Application Stock</h1>
+            <hr>
+        </header>
+       {%block content%}{%endblock%}
+
+       <footer>
+            <hr>
+            <h3>Pie de page</h3>
+       </footer>
+    </body>
+</html>
